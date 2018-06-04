@@ -1,6 +1,26 @@
 
-yacas <- function(x, ...)
-  UseMethod("yacas")
+
+
+#If the warning does not cause any functional problems
+# https://github.com/ggrothendieck/ryacas/issues/12 is obviously the possible solution if we have the right to coerce XML
+#see https://github.com/r-lib/xml2/issues/186 for xml
+#and https://support.bioconductor.org/p/96798/ shows how this problem also occurs
+#and https://gist.github.com/yihui/6656584 for how the warnings are suppressed
+
+yacas<-function(x,...){
+  
+  yacas1 <- function(x, ...)
+    UseMethod("yacas")
+  withCallingHandlers(suppressWarnings(yacas1(x,...)))
+  
+}
+
+
+
+
+
+
+
 
 yacas.character <- function(x, verbose = FALSE, method, retclass = c("expression", "character", "unquote"), addSemi = TRUE, ...) {
 
