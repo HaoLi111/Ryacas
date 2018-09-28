@@ -1,4 +1,6 @@
 # Ryacas #
+
+!!!THIS BRANCH IS NOT MAINTAINED SINCE AUG/2018!!!
 [![Build Status](https://travis-ci.org/grzegorzmazur/ryacas.svg?branch=master)](https://travis-ci.org/grzegorzmazur/ryacas)
 [![Build status](https://ci.appveyor.com/api/projects/status/60sjx4sxf032kdcg?svg=true)](https://ci.appveyor.com/project/grzegorzmazur/ryacas)
 
